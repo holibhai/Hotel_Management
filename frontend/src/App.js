@@ -24,12 +24,12 @@ import { ProtectedRoute, AdminRoute } from './service/guard';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="">
         <Navbar />
-        <div className="content">
+        <div className="">
           <Routes>
             {/* Public Routes */}
-            <Route exact path="/home" element={<HomePage />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/rooms" element={<AllRoomsPage />} />
