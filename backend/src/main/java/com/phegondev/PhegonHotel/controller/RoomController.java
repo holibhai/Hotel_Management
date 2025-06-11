@@ -90,7 +90,6 @@ public class RoomController {
                                                @RequestParam(value = "roomType", required = false) String roomType,
                                                @RequestParam(value = "roomPrice", required = false) BigDecimal roomPrice,
                                                @RequestParam(value = "roomDescription", required = false) String roomDescription
-
     ) {
         Response response = roomService.updateRoom(roomId, roomDescription, roomType, roomPrice, photo);
         return ResponseEntity.status(response.getStatusCode()).body(response);
