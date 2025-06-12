@@ -25,6 +25,8 @@ public class RoomController {
     private IBookingService iBookingService;
 
 
+
+
     @PostMapping("/add")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> addNewRoom(
