@@ -24,9 +24,6 @@ public class RoomController {
     @Autowired
     private IBookingService iBookingService;
 
-
-
-
     @PostMapping("/add")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> addNewRoom(
@@ -34,7 +31,7 @@ public class RoomController {
             @RequestParam(value = "roomType", required = false) String roomType,
             @RequestParam(value = "roomPrice", required = false) BigDecimal roomPrice,
             @RequestParam(value = "roomDescription", required = false) String roomDescription
-    ) {
+    ){
 
         if (photo == null || photo.isEmpty() || roomType == null || roomType.isBlank() || roomPrice == null || roomType.isBlank()) {
             Response response = new Response();
@@ -102,7 +99,6 @@ public class RoomController {
     public ResponseEntity<Response> deleteRoom(@PathVariable Long roomId) {
         Response response = roomService.deleteRoom(roomId);
         return ResponseEntity.status(response.getStatusCode()).body(response);
-
     }
 
 

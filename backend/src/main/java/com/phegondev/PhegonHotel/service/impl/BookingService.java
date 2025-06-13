@@ -35,7 +35,6 @@ public class BookingService implements IBookingService {
     public Response saveBooking(Long roomId, Long userId, Booking bookingRequest) {
 
         Response response = new Response();
-
         try {
             if (bookingRequest.getCheckOutDate().isBefore(bookingRequest.getCheckInDate())) {
                 throw new IllegalArgumentException("Check in date must come after check out date");
