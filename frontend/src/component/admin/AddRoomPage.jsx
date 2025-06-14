@@ -95,12 +95,12 @@ const AddRoomPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-600 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-xl w-full bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">Add New Room</h2>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded text-center">
+          <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-600 rounded text-center">
             {error}
           </div>
         )}
@@ -133,7 +133,7 @@ const AddRoomPage = () => {
           </div>
 
           <div>
-            <label htmlFor="roomType" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roomType" className="block text-sm font-medium text-gray-600 mb-1">
               Room Type
             </label>
             <select
